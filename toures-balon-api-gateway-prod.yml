@@ -1,1 +1,11 @@
-
+cloud:
+    gateway:
+      routes:
+      - id: toures-balon-usuario
+        uri: lb://TOURES-BALON-USUARIO
+        predicates:
+        - Path=/test/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.4:8761/eureka
