@@ -1,5 +1,8 @@
 spring:
     cloud:
+        loadbalancer:
+            ribbon:
+                enable: false
         gateway:
             routes:
             - id: toures-balon-usuario
