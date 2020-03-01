@@ -1,10 +1,11 @@
-cloud:
-    gateway:
-      routes:
-      - id: toures-balon-usuario
-        uri: lb://TOURES-BALON-USUARIO
-        predicates:
-        - Path=/usuario/**
+spring:
+    cloud:
+        gateway:
+            routes:
+            - id: toures-balon-usuario
+              uri: lb://TOURES-BALON-USUARIO
+              predicates:
+              - Path=/usuario/**
 eureka:
   client:
     serviceUrl:
