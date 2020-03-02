@@ -2,10 +2,12 @@ spring:
     cloud:
         gateway:
             routes:
-            - id: toures-balon-usuario-routes
-              uri: lb://TOURES-BALON-USUARIO
+            - id: toures-balon-usuario
+              uri: lb://toures-balon-usuario
               predicates:
               - Path=/usuario/**
+              filters:
+              - StripPrefix=1
 eureka:
   client:
     serviceUrl:
