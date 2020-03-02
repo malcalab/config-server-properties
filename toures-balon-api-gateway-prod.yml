@@ -8,11 +8,15 @@ spring:
                 locator:
                     lower-case-service-id: true
                     enabled: true
-            routes:
-            - id: toures-balon-usuario-routes
-             uri: lb://toures-balon-usuario
-              predicates:
-              - Path=/usuario/**
+management:
+  endpoint:
+    service-registry:
+      enabled: true
+            #routes:
+            #- id: toures-balon-usuario-routes
+             #uri: lb://toures-balon-usuario
+            #  predicates:
+           #   - Path=/usuario/**
 eureka:
   client:
     serviceUrl:
