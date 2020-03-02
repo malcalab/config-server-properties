@@ -3,7 +3,7 @@ spring:
         gateway:
             routes:
             - id: toures-balon-usuario
-              uri: lb//TOURES-BALON-USUARIO #http://172.17.0.6:9091
+              uri: lb://TOURES-BALON-USUARIO #http://172.17.0.6:9091
               predicates:
               - Path=/usuario/**
 eureka:
