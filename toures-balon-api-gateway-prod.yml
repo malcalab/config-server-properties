@@ -6,8 +6,6 @@ spring:
               uri: http://172.17.0.6:9091
               predicates:
               - Path=/usuario/**
-              filters:
-              - StripPrefix=1
 eureka:
   client:
     serviceUrl:
