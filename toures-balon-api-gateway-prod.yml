@@ -4,6 +4,10 @@ spring:
             ribbon:
                 enable: false
         gateway:
+            discobery:
+                locator:
+                    lower-case-service-id: true
+                    enabled: true
             routes:
             - id: toures-balon-usuario
               uri: lb://TOURES-BALON-USUARIO
@@ -13,3 +17,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://172.17.0.4:8761/eureka
+      
+      spring.cloud.gateway.discovery.locator.lower-case-service-id= true
+spring.cloud.gateway.discovery.locator.enabled= true
