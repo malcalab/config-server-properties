@@ -1,22 +1,11 @@
 spring:
     cloud:
-        #loadbalancer:
-         #   ribbon:
-          #      enable: false
         gateway:
-            discovery:
-                locator:
-                    lower-case-service-id: true
-                    enabled: true
-management:
-  endpoint:
-    service-registry:
-      enabled: true
-            #routes:
-            #- id: toures-balon-usuario-routes
-             #uri: lb://toures-balon-usuario
-            #  predicates:
-           #   - Path=/usuario/**
+            routes:
+            - id: toures-balon-usuario-routes
+             uri: lb://TOURES-BALON-USUARIO
+              predicates:
+              - Path=/usuario/**
 eureka:
   client:
     serviceUrl:
