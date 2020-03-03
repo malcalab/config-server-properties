@@ -15,5 +15,5 @@ eureka:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
       defaultZone: "http://172.17.0.4:8761/eureka"
-    instance:
-      ip-address: 172.17.0.6:9091
+  instance:
+    prefer-ip-address: true
