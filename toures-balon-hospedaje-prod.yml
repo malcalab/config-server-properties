@@ -3,7 +3,7 @@ spring:
     name: toures-balon-hospedaje
   data:
     mongodb:
-      uri:  mongodb://172.17.0.9/proveedor
+      uri:  mongodb://172.17.0.9/touresbalon-producto-hospedaje
       port: 27017
       password:
       username: 
