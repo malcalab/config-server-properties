@@ -1,6 +1,6 @@
 spring:
   application:
-    name: toures-balon-proveedor
+    name: toures-balon-hospedaje
   data:
     mongodb:
       uri:  mongodb://172.17.0.9/proveedor
