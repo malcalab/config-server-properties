@@ -19,6 +19,10 @@ spring:
               uri: lb://TOURES-BALON-PRODUCTO-HOSPEDAJE #http://172.17.0.6:9091
               predicates:
               - Path=/producto/hospedaje/**
+            - id: toures-balon-oauth
+              uri: lb://TOURES-BALON-OAUTH
+              predicates:
+              - Path=/oauth/**
 eureka:
   client:
     serviceUrl:
