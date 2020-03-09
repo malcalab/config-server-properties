@@ -1,1 +1,26 @@
 
+server:
+  port: 9394
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://172.17.0.11:9411/
+  application:
+    name: toures-balon-oauth
+eureka:
+  client:
+  #  service-url: {"http://toures-balon-discovery:8761/eureka"}
+    serviceUrl:
+      defaultZone: "http://172.17.0.4:8761/eureka"
+  instance:
+    prefer-ip-address: true
+gema:
+  oauth:
+    application-config:
+      frontAngular:
+        password: pica2020..
+        name: angular
+        jwt-password: droptable2020..
+        time-expiration: 360000
