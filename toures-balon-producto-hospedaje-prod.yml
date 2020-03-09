@@ -13,7 +13,7 @@ spring:
       password:
       username: 
 server:
-  port: 8182
+  port: 0
 eureka:
   client:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
