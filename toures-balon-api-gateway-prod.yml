@@ -38,13 +38,9 @@ oauth:
     - method: POST
       paths:
       - /oauth/token
+      - /usuario
     matchers-with-role:
     - method: GET
-      paths:
-      - \/usuario.*
-      roles:
-        - ROLE_ADMIN
-    - method: POST
       paths:
       - \/usuario.*
       roles:
