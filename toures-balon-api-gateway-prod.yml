@@ -29,7 +29,7 @@ oauth:
   enabled: true
   jwt:
     issuer: angular
-    password: 123456789
+    password: droptable2020..
     exclude-matchers:
     - method: POST
       paths:
