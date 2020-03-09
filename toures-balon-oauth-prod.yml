@@ -1,6 +1,6 @@
 
 server:
-  port: 9394
+  port: 0
 spring:
   sleuth:
     sampler:
