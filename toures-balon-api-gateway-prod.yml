@@ -25,3 +25,23 @@ eureka:
       defaultZone: http://172.17.0.4:8761/eureka
   instance:
     prefer-ip-address: true
+oauth:
+  enabled: true
+  jwt:
+    issuer: angular
+    password: 123456789
+    exclude-matchers:
+    - method: POST
+      paths:
+      - /oauth/token
+    matchers-with-role:
+    - method: GET
+      paths:
+      - \/usuario.*
+      roles:
+        - ROLE_ADMIN
+    - method: POST
+      paths:
+      - \/usuario.*
+      roles:
+        - ROLE_ADMIN
