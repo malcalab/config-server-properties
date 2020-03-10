@@ -43,5 +43,6 @@ oauth:
     - method: GET
       paths:
       - \/usuario.*
+      - \/producto.*
       roles:
         - ROLE_ADMIN
