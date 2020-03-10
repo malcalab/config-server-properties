@@ -1,15 +1,17 @@
-
-spring: #Indica que cuando usted inicie por defecto va a tomar la configuracion de desarrollo, que es la que tiene aqui en el application.yml
-    profiles:
-        active:
-        - dev
-    data:
-        mongodb:
-            port: 27017
-            uri: mongodb://localhost/touresbalon-producto-ciudad
-            password: ciudad
-            username: producto
-
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://172.17.0.11:9411/
+  application:
+    name: toures-balon-producto-ciudad
+  data:
+    mongodb:
+      uri:  mongodb://172.17.0.9/touresbalon-producto-ciudad
+      port: 27017
+      password:
+      username: 
 server:
     port: 0
 eureka:
