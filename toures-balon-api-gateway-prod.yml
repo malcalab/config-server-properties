@@ -50,3 +50,9 @@ oauth:
       - \/producto.*
       roles:
         - ROLE_ADMIN
+    - method: POST
+      paths:
+      - \/usuario.*
+      - \/producto.*
+      roles:
+        - ROLE_ADMIN
