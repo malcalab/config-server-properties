@@ -3,7 +3,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://172.17.0.11:9411/
+    base-url: http://172.17.0.5:9411/
   application:
     name: toures-balon-producto-ciudad
   data:
@@ -17,6 +17,6 @@ server:
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://172.17.0.4:8761/eureka
+            defaultZone: http://172.17.0.3:8761/eureka
     instance:
         prefer-ip-address: true
