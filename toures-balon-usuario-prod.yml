@@ -5,7 +5,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://172.17.0.5:9411/
+    base-url: http://172.17.0.11:9411/
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,6 +19,6 @@ eureka:
   client:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
-      defaultZone: "http://172.17.0.3:8761/eureka"
+      defaultZone: "http://172.17.0.8:8761/eureka"
   instance:
     prefer-ip-address: true
