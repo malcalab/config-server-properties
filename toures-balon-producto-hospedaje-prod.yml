@@ -3,12 +3,12 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://172.17.0.5:9411/
+    base-url: http://172.17.0.11:9411/
   application:
     name: toures-balon-producto-hospedaje
   data:
     mongodb:
-      uri:  mongodb://172.17.0.9/touresbalon-producto-hospedaje
+      uri:  mongodb://172.17.0.6/touresbalon-producto-hospedaje
       port: 27017
       password:
       username: 
@@ -18,6 +18,6 @@ eureka:
   client:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
-      defaultZone: "http://172.17.0.3:8761/eureka"
+      defaultZone: "http://172.17.0.8:8761/eureka"
   instance:
     prefer-ip-address: true
