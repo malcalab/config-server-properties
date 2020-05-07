@@ -27,6 +27,14 @@ spring:
               uri: lb://TOURES-BALON-PRODUCTO-CIUDAD
               predicates:
               - Path=/producto/ciudad/**
+            - id: touresbalon-producto-evento
+              uri: lb://TOURESBALON-PRODUCTO-EVENTO
+              predicates:
+              - Path=/producto/evento/**  
+            - id: touresbalon-producto-transporte
+              uri: lb://TOURESBALON-PRODUCTO-TRANSPORTE
+              predicates:
+              - Path=/producto/transporte/**  
 eureka:
   client:
     serviceUrl:
