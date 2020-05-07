@@ -17,7 +17,6 @@ spring:
     name: toures-balon-usuario
 eureka:
   client:
-  #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
       defaultZone: "http://172.17.0.6:8761/eureka"
   instance:
