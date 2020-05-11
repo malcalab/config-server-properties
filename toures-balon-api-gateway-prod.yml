@@ -38,7 +38,11 @@ spring:
             - id: toures-balon-configuracion
               uri: lb://TOURES-BALON-CONFIGURACION
               predicates:
-              - Path=/configuracion/**  
+              - Path=/configuracion/**
+            - id: toures-balon-carro
+              uri: lb://TOURES-BALON-CARRO
+              predicates:
+              - Path=/carro/**  
 eureka:
   client:
     serviceUrl:
@@ -56,15 +60,18 @@ oauth:
       - /oauth/token
       - /usuario
       - \/configuracion.*
+      - \/carro.*
     - method: GET
       paths:
       - \/configuracion.*
+      - \/carro.*
     - method: PUT
       paths:
       - \/configuracion.*
     - method: DELETE
       paths:
       - \/configuracion.*
+      - \/carro.*
     matchers-with-role:
     - method: GET
       paths:
