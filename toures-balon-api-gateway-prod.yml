@@ -34,7 +34,11 @@ spring:
             - id: touresbalon-producto-transporte
               uri: lb://TOURESBALON-PRODUCTO-TRANSPORTE
               predicates:
-              - Path=/producto/transporte/**  
+              - Path=/producto/transporte/**
+            - id: touresbalon-proveedor-hospedaje
+              uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE
+              predicates:
+              - Path=/proveedor/hospedaje/**
 eureka:
   client:
     serviceUrl:

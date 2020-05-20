@@ -1,0 +1,23 @@
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://172.17.0.11:9411/
+  application:
+    name: toures-balon-producto-hospedaje
+  data:
+    mongodb:
+      uri:  mongodb://172.17.0.6/touresbalon-proveedor-hospedaje
+      port: 27017
+      password:
+      username: 
+server:
+  port: 0
+eureka:
+  client:
+  #  service-url: {"http://toures-balon-discovery:8761/eureka"}
+    serviceUrl:
+      defaultZone: "http://172.17.0.9:8761/eureka"
+  instance:
+    prefer-ip-address: true
