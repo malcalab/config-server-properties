@@ -5,13 +5,12 @@ spring:
   zipkin:
     base-url: http://192.168.0.6:9411/
   application:
-    name: toures-balon-producto-hospedaje
+    name: toures-balon-proveedor-hospedaje
   data:
     mongodb:
-      uri:  mongodb://172.17.0.6/touresbalon-proveedor-hospedaje
+      host: 172.17.0.6
       port: 27017
-      password:
-      username: 
+      database: touresbalon-proveedor-hospedaje
 server:
   port: 0
 eureka:
