@@ -5,7 +5,7 @@ spring:
   zipkin:
     base-url: http://192.168.0.6:9411/
   application:
-    name: toures-balon-proveedor-hospedaje
+    name: touresbalon-proveedor-hospedaje
   data:
     mongodb:
       host: 172.17.0.6
