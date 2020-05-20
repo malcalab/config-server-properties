@@ -39,6 +39,10 @@ spring:
               uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE
               predicates:
               - Path=/proveedor/hospedaje/**
+            - id: touresbalon-proveedor-hospedaje-disponibilidad
+              uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE-DISPONIBILIDAD
+              predicates:
+              - Path=/proveedor/hospedaje/disponibilidad/**
             - id: toures-balon-configuracion
               uri: lb://TOURES-BALON-CONFIGURACION
               predicates:
