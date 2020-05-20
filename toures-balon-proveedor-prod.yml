@@ -8,7 +8,7 @@ spring:
     name: toures-balon-proveedor
   data:
     mongodb:
-      uri:  mongodb://172.17.0.9/proveedor
+      uri:  mongodb://172.17.0.6/proveedor
       port: 27017
       password:
       username: 
@@ -18,7 +18,7 @@ eureka:
   client:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
-      defaultZone: "http://172.17.0.6:8761/eureka"
+      defaultZone: "http://192.168.0.6:8761/eureka"
   instance:
     prefer-ip-address: true
  
