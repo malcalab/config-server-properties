@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: toures-balon-usuario-categoria
+server:
+  port: 0
+---
+
+eureka:
+  client:
+  #  service-url: {"http://toures-balon-discovery:8761/eureka"}
+    serviceUrl:
+      defaultZone: "http://172.17.0.6:8761/eureka"
+  instance:
+    prefer-ip-address: true
+spring:
+  sleuth:
+     sampler:
+       probability: 1.0
+   zipkin:
+     base-url: http://172.17.0.8:9411/
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://172.17.0.7:3306/toures-balon-categoria
+    username: root
+    password: root
+  profiles: 
+    active:
+    - dev
+gema:
+  kafka:
+    producer:
+      enabled: true
+      bootstrap-server: htpp://172.18.0.3:29092
+    consumer:
+      enabled: true
+      bootstrap-server: htpp://172.18.0.3:29092
+      
+dividing-factor: 1000
+ 

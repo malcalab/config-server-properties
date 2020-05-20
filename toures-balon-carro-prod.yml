@@ -1,20 +1,17 @@
-server:
-  port: 0
 spring:
   sleuth:
     sampler:
       probability: 1.0
   zipkin:
     base-url: http://172.17.0.8:9411/
-  jpa:
-    hibernate:
-      ddl-auto: update
-  datasource:
-    url: jdbc:mysql://172.17.0.7:3306/toures_domain_usuario
-    username: root
-    password: root
   application:
-    name: toures-balon-usuario
+    name: toures-balon-carro
+  redis:
+    host: 192.168.0.6
+  profiles:
+    active: prod
+server:
+  port: 0
 eureka:
   client:
     serviceUrl:

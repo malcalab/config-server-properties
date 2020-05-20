@@ -3,7 +3,7 @@ spring:
      sampler:
       probability: 1.0
     zipkin:
-     base-url: http://172.17.0.11:9411/
+     base-url: http://172.17.0.8:9411/
     cloud:
         gateway:
             routes:
@@ -39,10 +39,23 @@ spring:
               uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE
               predicates:
               - Path=/proveedor/hospedaje/**
+            - id: toures-balon-configuracion
+              uri: lb://TOURES-BALON-CONFIGURACION
+              predicates:
+              - Path=/configuracion/**
+            - id: toures-balon-carro
+              uri: lb://TOURES-BALON-CARRO
+              predicates:
+              - Path=/carro/**  
+            - id: toures-balon-campana
+              uri: lb://TOURES-BALON-CAMPANA
+              predicates:
+              - Path=/campana/**  
+>>>>>>> master
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.9:8761/eureka
+      defaultZone: http://172.17.0.6:8761/eureka
   instance:
     prefer-ip-address: true
 oauth:
@@ -55,6 +68,21 @@ oauth:
       paths:
       - /oauth/token
       - /usuario
+      - \/configuracion.*
+      - \/carro.*
+      - \/campana.*
+    - method: GET
+      paths:
+      - \/configuracion.*
+      - \/carro.*
+      - \/campana.*
+    - method: PUT
+      paths:
+      - \/configuracion.*
+    - method: DELETE
+      paths:
+      - \/configuracion.*
+      - \/carro.*
     matchers-with-role:
     - method: GET
       paths:
