@@ -31,10 +31,10 @@ gema:
   kafka:
     producer:
       enabled: true
-      bootstrap-server: htpp://172.18.0.3:29092
+      bootstrap-server: htpp://192.168.0.6:29092
     consumer:
       enabled: true
-      bootstrap-server: htpp://172.18.0.3:29092
+      bootstrap-server: htpp://192.168.0.6:29092
       
 dividing-factor: 1000
  
