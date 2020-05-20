@@ -9,7 +9,7 @@ eureka:
   client:
   #  service-url: {"http://toures-balon-discovery:8761/eureka"}
     serviceUrl:
-      defaultZone: "http://172.17.0.6:8761/eureka"
+      defaultZone: "http://192.168.0.6:8761/eureka"
   instance:
     prefer-ip-address: true
 spring:
@@ -17,11 +17,11 @@ spring:
      sampler:
        probability: 1.0
    zipkin:
-     base-url: http://172.17.0.8:9411/
+     base-url: http://192.168.0.6:9411/
   jpa:
     show-sql: true
   datasource:
-    url: jdbc:mysql://172.17.0.7:3306/toures-balon-categoria
+    url: jdbc:mysql://172.17.0.5:3306/toures-balon-categoria
     username: root
     password: root
   profiles: 
