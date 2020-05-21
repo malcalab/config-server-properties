@@ -38,7 +38,7 @@ spring:
             - id: touresbalon-proveedor-hospedaje
               uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE
               predicates:
-              - Path=/proveedor/hospedaje/**
+              - Path=/proveedor/hospedaje,/proveedor/hospedaje/plantilla-consulta
             - id: touresbalon-proveedor-hospedaje-disponibilidad
               uri: lb://TOURESBALON-PROVEEDOR-HOSPEDAJE-DISPONIBILIDAD
               predicates:
@@ -79,9 +79,11 @@ oauth:
       - \/configuracion.*
       - \/carro.*
       - \/campana.*
+      - \/proveedor.*
     - method: PUT
       paths:
       - \/configuracion.*
+      - \/proveedor.*
     - method: DELETE
       paths:
       - \/configuracion.*
