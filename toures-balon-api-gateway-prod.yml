@@ -11,10 +11,6 @@ spring:
               uri: lb://TOURES-BALON-USUARIO #http://172.17.0.6:9091
               predicates:
               - Path=/usuario/**
-            - id: toures-balon-proveedor
-              uri: lb://TOURES-BALON-PROVEEDOR #http://172.17.0.6:9091
-              predicates:
-              - Path=/proveedor/**
             - id: toures-balon-producto-hospedaje
               uri: lb://TOURES-BALON-PRODUCTO-HOSPEDAJE #http://172.17.0.6:9091
               predicates:
