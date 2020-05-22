@@ -59,6 +59,10 @@ spring:
               uri: lb://TOURES-BALON-CAMPANA
               predicates:
               - Path=/campana/**  
+            - id: toures-balon-orden
+              uri: lb://TOURES-BALON-ORDEN
+              predicates:
+              - Path=/orden/**  
 eureka:
   client:
     serviceUrl:
@@ -78,12 +82,14 @@ oauth:
       - \/configuracion.*
       - \/carro.*
       - \/campana.*
+      - \/orden.*
     - method: GET
       paths:
       - \/configuracion.*
       - \/carro.*
       - \/campana.*
       - \/proveedor.*
+      - \/orden.*
     - method: PUT
       paths:
       - \/configuracion.*
